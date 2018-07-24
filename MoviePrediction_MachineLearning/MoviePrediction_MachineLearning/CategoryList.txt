@@ -1,0 +1,27 @@
+Category:
+
+Horror -> 				1	:1
+Comedy -> 				2	:2
+Classic -> 				4	:3
+Thriller -> 				8	:4
+TV -> 					16	:5
+Romance -> 				32	:6
+Action and Adventure -> 		64	:7
+Reality -> 				128	:8
+Drama -> 				256	:9
+Science Fiction and Fantasy -> 		512	:10
+Myster and Suspense -> 			1024	:11
+Kids and Family -> 			2048	:12
+
+
+
+2624
+2560
+1280
+257
+832
+832
+320
+2
+1026
+

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>c97e42cb-2337-4797-bd47-9a5d7aa38244</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>MoviePrediction_MachineLearning_V2.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>MoviePrediction_MachineLearning</Name>
+    <RootNamespace>MoviePrediction_MachineLearning</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="MoviePrediction_MachineLearning_V1.py" />
+    <Compile Include="mpml_runonce_V2.py" />
+    <Compile Include="mpml_runonce_V1.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_DataMap.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_Agent.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MoviePrediction_MachineLearning_V2.py" />
+    <Compile Include="_bubbleSort.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_GeneticAlg.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_inputCollection.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_mymath.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_NeuralNet.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="_Excel.py" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <Import Condition="Exists($(PtvsTargetsFile))" Project="$(PtvsTargetsFile)" />
+  <Import Condition="!Exists($(PtvsTargetsFile))" Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
