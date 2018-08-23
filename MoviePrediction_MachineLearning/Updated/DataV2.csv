@@ -1,0 +1,9 @@
+Title,Rating (Rotten Tomato)(Audience Rating),Category 1,Category 2,Category 3,Length,NumTitle,Liked,,Dummy,,,0,Drama -> ,,,9,,,,,
+Harry Potter and the Phil Stone,82,7,10,12,152,6,Y,,Horror -> ,,,1,Science Fiction and Fantasy -> ,,,10,,,,,
+Harry Potter and the Chamber of Secrets,82,7,10,12,161,7,Y,,Comedy -> ,,,2,Mystery and Suspense -> ,,,11,,,,,
+Annabelle: Creation,68,1,9,9,109,2,N,,Classic -> ,,,3,Kids and Family -> ,,,12,,,,2,Y
+Starwars Han,64,7,9,10,135,5,N,,Thriller -> ,,,4,Johnny English,50,2,2,2,88,,3,Y
+Transformers (latest),44,7,10,10,154,4,N,,TV -> ,,,5,Johnny English 2,44,2,2,2,101,,2,Y
+Kingdom of Heaven,72,3,7,9,145,3,Y,,Romance -> ,,,6,American Sniper,84,7,9,9,134,,1,Y
+Braveheart,85,3,7,9,177,1,Y,,Action and Adventure -> ,,,7,Shooter,80,7,9,11,125,,,
+Jurassic World,78,7,10,11,123,2,Y,,Reality -> ,,,8,,,,,,,,,
