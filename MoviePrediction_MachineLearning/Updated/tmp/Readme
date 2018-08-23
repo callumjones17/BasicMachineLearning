@@ -1,0 +1,8 @@
+Must have a working python3 environment
+No other 3rd party packages required
+
+MoviePrediction_MachineLearning_V3.py NumberOfAgents NumberOfGenerations NeuronFireFactor NumberOfSwaps NumberOfChancesToMutate
+
+mpml_runonce_V3.py MovieScore(RottenTomato) Category-1 Category-2 Category-3 Runtime NumWordsInTitle
+
+For categories please refer to data excel sheet.
