@@ -2,6 +2,7 @@
 import math
 
 def setupNetwork(networkMap):
+    """Work out how many Nuerons and total Weights are required for each Layer"""
     numL1 = 0
     numL2 = 0
     numL3 = 0
@@ -17,7 +18,7 @@ def setupNetwork(networkMap):
 
 
 def runThroughNetworkOnce(data,agent,NetworkMap):
-
+    """"Run One Agent Through All Data Once Returns Result."""
     Layer2Nodes = []
     Layer3Nodes = []
     sum = 0
@@ -39,10 +40,12 @@ def runThroughNetworkOnce(data,agent,NetworkMap):
     return Layer3Nodes[0]
 
 def nodeFire(input,numL):
+    """"Tanh Function to Range Limit all Incomming Data"""
     output =  float((1/2)*(math.tanh((float(1/(numL/4)))*(input-(float(numL/2))))+1))
     return output
 
 def workOutResult(fullDataSet,resultRow,fireFactor,movieId,result):
+    """Returns a 1 if Matches Movie and 0 if Not"""
     if (result > fireFactor):
 #       print('Y')
         if (fullDataSet[movieId][resultRow] == 'Y'):
@@ -62,6 +65,7 @@ def workOutResult(fullDataSet,resultRow,fireFactor,movieId,result):
     return result
 
 def getActualResult(fireFactor,result):
+    """A number is no good to the user, returns Y or N"""
     resultAct = 'X'
     if (result > fireFactor):
 #       print('Y')

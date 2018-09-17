@@ -5,6 +5,7 @@ import time
 
 #Number to Breed
 def numToBreed(numAgents, numSurv):
+    """Based on number of Current Agents and Number of Survivors, Calculate number of Agents to Breed"""
     num = 0
     if (numAgents-numSurv)%2 == 0:
         num = (numAgents-numSurv)/2
@@ -19,11 +20,13 @@ def numToBreed(numAgents, numSurv):
 
 #Cuttoff Stuff
 def naturalSelection(Agents,AgentScores,numSurvivors):
+    """Literally only Keep agents in the Agent array from index 0 to numSurvivors"""
     survivingAgents = []
     survivingAgents = bs.sort_rev(AgentScores,Agents)[0:numSurvivors]
     return survivingAgents
 
 def properSelection(Agents,AgentScores,maxScore,minC,maxC):
+    """Quick Google Search of a better approach to selecting Agents (Uses normalised Scores etc.)"""
     lenAg = len(Agents)
     normScores = []
     accumScores = []
@@ -64,6 +67,7 @@ def properSelection(Agents,AgentScores,maxScore,minC,maxC):
 
 #RandomStuff
 def randomAgents(Agents, numAgents,numL1,numL2,numL3):
+    """Create some new Random Agents"""
     newAgents = []
     newAgents = Agents
     for i in range(numAgents):
@@ -75,6 +79,7 @@ def randomAgents(Agents, numAgents,numL1,numL2,numL3):
     return newAgents
 
 def randomAgentsV3(Agents, numAgents,numW):
+    """Create some new Random Agents"""
     newAgents = []
     newAgents = Agents
     for i in range(numAgents):
@@ -90,7 +95,7 @@ def randomAgentsV3(Agents, numAgents,numW):
 
 #Crossover Stuff (Breeding)
 def breedAgents(Agents,num):
-    #Breeds in a uniform pattern
+    """Breeds in a uniform pattern"""
     newAgents = []
     newAgents = Agents
     for i in range(num):
@@ -99,7 +104,7 @@ def breedAgents(Agents,num):
     return newAgents
 
 def breedAgentsEvenly(Agents,num):
-    #Breeds more evenly
+    """Creates two agents per pair, so as to create two opposites"""
     newAgents = []
     newAgents = Agents
     lenAg = len(Agents[0])
@@ -132,14 +137,14 @@ def singleCrossover(Agents,num,cutPoint):
 
 #Mutation Stuff
 def mutateStrategically(Agents):
-    #Warning: This Method only works for Weightings x 2 = Num(Agents)
+    """Warning: This Method only works for Weightings x 2 = Num(Agents) - DEPRECATED DONT USE"""
     for i in range(12):
         Agents[i][i] = Agents[i][i] + 0.05
         Agents[i+12][i] = Agents[i+12][i] - 0.05
     return Agents
 
 def inverseAgent(Agents, num):
-    #Reverses num Agents
+    """Reverses some of the Agents in the list (moves their position)"""
     agent = []
     lenAg = len(Agents[0])
     for i in range(num):
@@ -150,12 +155,13 @@ def inverseAgent(Agents, num):
     return Agents
 
 def randomMutation(Agents,min,max):
+    """Completely Random Mutation, to a Random Agent"""
     for i in range(min,max):
         Agents[int(random.random()*len(Agents))-1][int(random.random()*len(Agents[0]))-1] = random.random()
     return Agents
 
 def gaMutation(Agents, numRunThroughs):
-    """Mutate According to Research"""
+    """Each Weighting has a 1/LW chance of mutation. WL is number of weightings per agent"""
     #Each Gene, from each Chromosone has a 1/L chance of mutation.
     #Where L is the length of the Chromosone
     random.seed(time.time())

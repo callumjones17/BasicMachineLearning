@@ -1,6 +1,7 @@
 import mysql.connector
 
 def writeToSqlTable(username,_password,_host,_database,table,fields,data):
+    """Insert SQL Statement"""
 
     if (_password == ''):
         cnx = mysql.connector.connect(user=username,host=_host,database=_database)
@@ -31,6 +32,8 @@ def writeToSqlTable(username,_password,_host,_database,table,fields,data):
 
 
 def getWholeTable(username,_password,_host,_database,table):
+    """Select SQL Statement"""
+
     data = []
 
     if (_password == ''):
@@ -53,6 +56,8 @@ def getWholeTable(username,_password,_host,_database,table):
     return data
 	
 def runCommand(username,_password,_host,_database,table,command):
+    """Custom SQL Statement"""
+
 	if (_password == ''):
 		cnx = mysql.connector.connect(user=username,host=_host,database=_database)
 	else:
@@ -65,6 +70,8 @@ def runCommand(username,_password,_host,_database,table,command):
 	return data
 	
 def getBiggestId(username,_password,_host,_database,table):
+    """If table contains an Id column, this function will return the largest Id in the Table"""
+
 	command = "SELECT Id FROM users"
 	bigId = 0
 	if (_password == ''):

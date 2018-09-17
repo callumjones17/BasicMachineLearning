@@ -5,6 +5,7 @@ def setupNetwork(numLayer1,numLayer2,numLayer3):
     return (numLayer1*numLayer2) + (numLayer2*numLayer3)
 
 def runThroughNetworkWithAgent(data,agent,numL1,numL2,numL3):
+    """Take an Agent through all the Data, set up only for an x-x-x network"""
     Layer1Nodes = []
     Layer2Nodes = []
     Layer3Nodes = []
@@ -37,6 +38,7 @@ def runThroughNetworkWithAgent(data,agent,numL1,numL2,numL3):
 
 
 def runThroughNetworkWithAgentWithFireFactor(data,agent,fireFactor):
+    """Take an Agent through all the Data, set up only for an x-x-x network, with fire factor"""
     Layer1Nodes = []
     numL1 = 3
     Layer2Nodes = []
@@ -78,6 +80,7 @@ def runThroughNetworkWithAgentWithFireFactor(data,agent,fireFactor):
 
 
 def workOutResult(fullDataSet,resultRow,fireFactor,movieId,result):
+    """Based on the result, work out it network was correct, returns 0 or 1"""
     if (result > fireFactor):
 #       print('Y')
         if (fullDataSet[movieId][resultRow] == 'Y'):
@@ -97,6 +100,7 @@ def workOutResult(fullDataSet,resultRow,fireFactor,movieId,result):
     return result
 
 def getActualResult(fireFactor,result):
+    """Get actual result - Easier for Humans to understand, returns Y or N"""
     resultAct = 'X'
     if (result > fireFactor):
 #       print('Y')
