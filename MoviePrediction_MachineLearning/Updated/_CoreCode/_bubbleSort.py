@@ -24,7 +24,7 @@ def sort_rev(AgentScore, Agents):
     return Agents
 
 def swapValues(AgentScore, Agents, _from, _to):
-    """Swap Elements in an Array"""
+    """Swap Elements in an Array (Specific to this Application)"""
     
     temp = AgentScore[_from]
     AgentScore[_from] = AgentScore[_to]
@@ -36,12 +36,12 @@ def swapValues(AgentScore, Agents, _from, _to):
 
     return Agents
 
-def swapValuesOneArray(Agents, _from, _to):
-    """Swap Elements in an Array"""
+def swapValuesOneArray(Array, _from, _to):
+    """Swap Elements in an Array (General Purpose)"""
     
-    temp = Agents[_from]
-    Agents[_from] = Agents[_to]
-    Agents[_to] = temp
+    temp = Array[_from]
+    Array[_from] = Array[_to]
+    Array[_to] = temp
 
     return Agents
 
@@ -62,6 +62,8 @@ def unsort(Agents, numSwaps):
         index2 = _mymath.clampEx(index2,index)
         Agents = swapValuesOneArray(Agents,index,index2)
     return Agents
+
+
 
 ###THIS IS ONLY USED FOR GETTING AGENT FROM PROGRAM TO PROGRAM!!!
 def reverseArrayOrder(array):

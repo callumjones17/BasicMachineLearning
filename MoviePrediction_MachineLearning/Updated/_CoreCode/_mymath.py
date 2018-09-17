@@ -32,6 +32,7 @@ def clampArray(array,clamp):
     return outArray
 
 def clampEx(num,avoid):
+    """Add one to Avoid if Equal"""
     if num == avoid:
         num += 1
     return num
